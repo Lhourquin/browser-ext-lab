@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+		"name": "Display word selected",
+		"version": "1.0",
+
+		"description": "Display word selected in a pop up",
+
+		"icons": {
+			"48": "icon/border-48.png"
+		},
+
+		"content_scripts": [
+			{
+				"matches": ["<all_urls>"],
+				"js": ["index.js"],
+				"css": ["main.css"]
+			}
+		],
+		"browser_action": {
+			"default_popup":"index.html"
+		},
+		"permission":[
+			"activeTab"
+		]
+}
+
